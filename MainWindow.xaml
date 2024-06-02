@@ -38,14 +38,8 @@
             </Border>
 
         </Border>
-        <m:Map CredentialsProvider="AttsGkqIHCOIEA11KtQZDphl5bi8lppin64jeg-ZOOhiS4cdHA_EXJwHSbyZi4Xo" Mode="Road" ZoomLevel="16" Center="-23.1870304,-50.6606103" Margin="254,81,10,10">
-            <Canvas
-m:MapLayer.Position="-23.1870304,-50.6606103"
-m:MapLayer.PositionOrigin="BottomCenter" Width="30" Height="30">
 
 
-            </Canvas>
-        </m:Map>
         <Grid>
             <Grid.RowDefinitions>
                 <!--Control bar-->
@@ -171,7 +165,7 @@ m:MapLayer.PositionOrigin="BottomCenter" Width="30" Height="30">
                         Margin="15,25,0,40" Width="154">
 
                         <Image Source="/Images/icon8-location-48.png" Height="30"  Width="0">
-                            
+
                         </Image>
                         <TextBlock Text="Bing map"
                            Foreground="{StaticResource titleColor1}"
@@ -213,7 +207,30 @@ m:MapLayer.PositionOrigin="BottomCenter" Width="30" Height="30">
             </Border>
 
         </Grid>
+        <Grid Margin="252,99,23,32">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1004*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
 
+            <m:Map CredentialsProvider="AttsGkqIHCOIEA11KtQZDphl5bi8lppin64jeg-ZOOhiS4cdHA_EXJwHSbyZi4Xo" Mode="Road" ZoomLevel="16" Center="-23.1870304,-50.6606103" Grid.Row="0" Grid.ColumnSpan="2"  >
+                <Canvas m:MapLayer.Position="-23.1870304,-50.6606103" m:MapLayer.PositionOrigin="BottomCenter" />
+            </m:Map>
+
+            <Border CornerRadius="3" BorderThickness="2" Opacity="0.95" Grid.ColumnSpan="2" Margin="-2,-2,-2,-1" Grid.RowSpan="2"  >
+                <Border.BorderBrush>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="#462AD8" Offset="0"/>
+                        <GradientStop Color="#5d26ff" Offset="0.75"/>
+                        <GradientStop Color="#1139e8" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.BorderBrush>
+            </Border>
+        </Grid>
     </Grid>
 </Window>
             
